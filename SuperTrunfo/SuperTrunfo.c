@@ -12,6 +12,7 @@ int main() {
     
 // Carta 1 - Manaus
     int codigo1;
+    char estado1;
     char nome1[50];
     int populacao1;
     float area1;
@@ -20,6 +21,7 @@ int main() {
 
     // Carta 2 - Fortaleza
     int codigo2;
+    char estado2;
     char nome2[50];
     int populacao2;
     float area2;
@@ -34,8 +36,11 @@ int main() {
     printf("Digite o codigo da cidade 1: ");
     scanf("%d", &codigo1);
 
-    printf("Digite o nome da cidade 1: ");
+    printf("Digite o estado1: ");
     scanf(" %[^\n]", nome1); // lê string com espaços
+
+    printf("Digite o nome da cidade 1: ");
+    scanf(" %[^\n]", nome1);
 
     printf("Digite a populacao da cidade 1: ");
     scanf("%d", &populacao1);
@@ -54,6 +59,9 @@ int main() {
     // Cadastro da segunda carta
     printf("Digite o codigo da cidade 2: ");
     scanf("%d", &codigo2);
+
+    printf("Digite o estado2: ");
+    scanf(" %[^\n]", nome1);
 
     printf("Digite o nome da cidade 2: ");
     scanf(" %[^\n]", nome2);
@@ -74,8 +82,9 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-        printf("\n--- Dados da Carta 1 ---\n");
+    printf("\n--- Dados da Carta 1 ---\n");
     printf("Codigo: %d\n", codigo1);
+    printf("Estado: %s\n", estado1);
     printf("Nome: %s\n", nome1);
     printf("Populacao: %d\n", populacao1);
     printf("Area: %.2f km²\n", area1);
@@ -84,6 +93,7 @@ int main() {
 
     printf("\n--- Dados da Carta 2 ---\n");
     printf("Codigo: %d\n", codigo2);
+    printf("Estado: %s\n", estado2);
     printf("Nome: %s\n", nome2);
     printf("Populacao: %d\n", populacao2);
     printf("Area: %.2f km²\n", area2);
