@@ -6,11 +6,10 @@
 // Siga os comentários para implementar cada parte do desafio.
 //Teste Erick
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+#include <stdio.h> 
 
-    //CARTA 1
+int main() {
+    // CARTA 1
     int codigo1;
     char estado1[50]; 
     char nome1[50];
@@ -18,8 +17,10 @@ int main() {
     float area1;
     float pib1;
     int pontos1;
+    float densidade1;
+    float pib_percapta1;
 
-    //CARTA 2
+    // CARTA 2
     int codigo2;
     char estado2[50]; 
     char nome2[50];
@@ -27,12 +28,10 @@ int main() {
     float area2;
     float pib2;
     int pontos2;
+    float densidade2;
+    float pib_percapta2;
 
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-
-    //Cadastro da primeira carta
+    // Cadastro da Carta 1
     printf("Digite o codigo da cidade 1: \n");
     scanf("%d", &codigo1);
 
@@ -56,7 +55,7 @@ int main() {
 
     printf("\n");
 
-    //Cadastro da segunda carta
+    // Cadastro da Carta 2
     printf("Digite o codigo da cidade 2: \n");
     scanf("%d", &codigo2);
 
@@ -78,10 +77,14 @@ int main() {
     printf("Digite o numero de pontos turisticos da cidade 2: \n");
     scanf("%d", &pontos2);
 
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    // Cálculos
+    densidade1 = (float)populacao1 / area1;
+    pib_percapta1 = (pib1 * 1000000000) / populacao1;
 
+    densidade2 = (float)populacao2 / area2;
+    pib_percapta2 = (pib2 * 1000000000) / populacao2;
+
+    // Resultado
     printf("\n--- Dados da Carta 1 ---\n");
     printf("Codigo: %d\n", codigo1);
     printf("Estado: %s\n", estado1);
@@ -90,6 +93,8 @@ int main() {
     printf("Area: %.2f km²\n", area1);
     printf("PIB: %.2f bilhoes\n", pib1);
     printf("Pontos turisticos: %d\n", pontos1);
+    printf("Densidade demografica: %.2f hab/km²\n", densidade1);
+    printf("PIB per capita: %.2f R$\n", pib_percapta1);
 
     printf("\n--- Dados da Carta 2 ---\n");
     printf("Codigo: %d\n", codigo2);
@@ -99,6 +104,8 @@ int main() {
     printf("Area: %.2f km²\n", area2);
     printf("PIB: %.2f bilhoes\n", pib2);
     printf("Pontos turisticos: %d\n", pontos2);
+    printf("Densidade demografica: %.2f hab/km²\n", densidade2);
+    printf("PIB per capita: %.2f R$\n", pib_percapta2);
 
     return 0;
 }
